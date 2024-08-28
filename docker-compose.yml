@@ -23,6 +23,7 @@ services:
     ports:
       - "80:80" # Needed for SSL generation using letsencrypt
       - "${OR_SSL_PORT:-443}:443"
+      - "1883:1883" # Thêm cổng MQTT
       - "8883:8883"
       - "127.0.0.1:8404:8404" # Localhost metrics access
     volumes:
